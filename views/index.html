@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Buzzard | Designer</title>
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="../public/css/global.css">
+    <script src="../public/js/jquery-3.2.1.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    <script src="../public/js/statusbar.js"></script>
+    <script src="../public/js/linear.js"></script>
+    <script src="../public/js/dom.js"></script>
+  </head>
+  <body>
+
+    <div id="PIheader">
+        <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+          
+        </svg>
+        <button id="viewSVG">Ampliar</button>
+    </div>
+
+    <div id="PI">
+      <div id="PImenu">
+        <button id="selectorEdit" class="selector active">Editor</button>
+        <button id="selectorDraw" class='selector'>Dibuja</button>
+        <input style="display: none;" type="file" id="file-input" />
+      </div>
+    </div>
+    
+    <section id="space">
+
+      <header style="-webkit-app-region: drag">
+        <button id="new" class="active">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1"> <rect x="40" y="10" width="50" height="60" fill="rgb(102,113,124)"></rect> <rect x="10" y="30" width="50" height="60" fill="rgb(82,93,104)"></rect> <line x1="25" y1="14" x2="25" y2="25" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="26" y1="14" x2="26" y2="25" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="27" y1="14" x2="27" y2="25" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="20" y1="20" x2="32" y2="20" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="20" y1="19" x2="32" y2="19" stroke="rgb(102,113,124)" stroke-linecap="round"></line> </svg>
+        </button>
+        <button id="compila" class="active">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1"> <rect x="10" y="10" width="70" height="80" fill="rgb(102,113,124)"></rect> <rect x="80" y="20" width="10" height="70" fill="rgb(102,113,124)"></rect> <line x1="80" y1="10" x2="90" y2="20" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="80" y1="10" x2="90" y2="21" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="67" y1="10" x2="90" y2="22" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="80" y1="10" x2="90" y2="23" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="77" y1="10" x2="90" y2="24" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="80" y1="10" x2="90" y2="25" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="80" y1="10" x2="90" y2="26" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="80" y1="10" x2="90" y2="27" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="76" y1="10" x2="90" y2="28" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="77" y1="10" x2="90" y2="29" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="78" y1="10" x2="90" y2="30" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="79" y1="10" x2="90" y2="31" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="76" y1="10" x2="90" y2="37" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="75" y1="10" x2="90" y2="38" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="78" y1="10" x2="90" y2="39" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="80" y1="10" x2="90" y2="40" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="76" y1="10" x2="90" y2="41" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="80" y1="10" x2="90" y2="42" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="78" y1="10" x2="90" y2="43" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="80" y1="10" x2="90" y2="44" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="80" y1="10" x2="90" y2="45" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="11" y1="10" x2="79" y2="10" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="20" x2="90" y2="89" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <rect x="25" y="10" width="50" height="23" fill="rgb(33,37,43)"></rect> <rect x="64" y="15" width="5" height="13" fill="rgb(102,113,124)"></rect> <rect x="25" y="60" width="50" height="30" fill="rgb(33,37,43)"></rect> <rect x="30" y="65" width="40" height="5" fill="rgb(102,113,124)"></rect> <rect x="30" y="75" width="40" height="5" fill="rgb(102,113,124)"></rect> </svg>
+        </button>
+        <button id="open" class="active">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1"> <rect x="10" y="50" width="80" height="40" fill="rgb(102,113,124)"></rect> <rect x="10" y="40" width="35" height="10" fill="rgb(102,113,124)"></rect> <rect x="20" y="25" width="35" height="10" fill="rgb(102,113,124)"></rect> <rect x="50" y="35" width="40" height="10" fill="rgb(102,113,124)"></rect> <circle cx="80" cy="20" r="6" fill="rgb(102,113,124)"></circle> </svg>
+        </button>
+        <button id="ex" class="active">
+          <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1"><line x1="10" y1="90" x2="90" y2="10" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="90" y2="90" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="70" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="69" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="68" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="67" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="66" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="65" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="64" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="63" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="62" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="61" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="60" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="59" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="58" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="57" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="56" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="55" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="54" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="53" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="52" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="90" x2="50" y2="51" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="50" y1="70" x2="90" y2="90" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="70" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="69" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="68" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="67" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="66" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="65" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="64" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="63" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="62" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="61" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="60" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="59" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="58" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="57" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="56" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="55" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="54" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="53" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="52" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="90" x2="51" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="70" y1="50" x2="90" y2="10" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="30" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="31" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="32" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="33" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="34" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="35" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="36" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="37" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="38" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="39" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="40" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="41" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="42" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="43" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="44" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="45" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="46" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="47" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="48" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="90" y1="10" x2="50" y2="49" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="50" y1="30" x2="10" y2="10" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="30" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="31" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="32" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="33" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="34" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="35" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="36" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="37" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="38" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="39" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="40" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="41" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="42" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="43" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="44" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="45" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="46" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="47" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="48" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="10" y1="10" x2="49" y2="50" stroke="rgb(102,113,124)" stroke-linecap="round"></line> <line x1="30" y1="50" x2="10" y2="90" stroke="rgb(102,113,124)" stroke-linecap="round"></line> </svg>
+        </button>
+        <section id="actionButtons">
+          <button id="close">
+            x
+          </button>
+          <button id="minimize">
+            -
+          </button>
+          <button id="maximize">
+            +
+          </button>
+        </section>
+        <span id="title">Buzzard | Designer</span>
+      </header>
+
+
+      <div id="txtIzq" class="viewActive">
+        <div id="lines">
+          
+        </div>
+        <div id="code"
+          contenteditable="true" role="textbox" spellcheck="true">
+          <div>Color rgb(102,113,124)</div>
+          <div>Linea 50 90 10 10</div>
+          <div>Linea 50 90 90 10</div>
+          <div>Linea 10 90 50 10</div>
+          <div>Linea 50 10 90 90</div>
+          <div>Linea 30 50 70 50</div>
+          <div>Linea 50 10 50 90</div>
+          <div>Linea 10 10 90 90</div>
+          <div>Linea 10 90 90 10</div>
+          <div>Circulo 50 50 10</div>
+        </div>
+      </div>
+
+      <div id="txtDer">
+        
+        <div id="buttons">
+          <script>
+            for ( var j = 1; j < 10; j++) {
+              for ( var i = 1; i < 10; i++) {
+                var boton = "<button ";
+                if (i == 1) {
+                  boton += "style='margin-left: 40px' ";
+                }
+                if (j == 1) {
+                  boton += "style='margin-top: 40px' ";
+                }
+                document.write(boton + ";></button>");
+              }
+            }
+          </script>
+        </div>
+
+        <svg style="margin-bottom: -6px;" width="400" height="400" fill="#333" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+          
+          <rect x="0" y="0" width="100" height="100" fill="rgb(33,37,43)"></rect> <line x1="0" y1="90" x2="100" y2="90" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="0" y1="80" x2="100" y2="80" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="0" y1="70" x2="100" y2="70" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="0" y1="60" x2="100" y2="60" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="0" y1="50" x2="100" y2="50" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="0" y1="40" x2="100" y2="40" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="0" y1="30" x2="100" y2="30" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="0" y1="20" x2="100" y2="20" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="0" y1="10" x2="100" y2="10" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="10" y1="100" x2="10" y2="0" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="20" y1="100" x2="20" y2="0" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="30" y1="100" x2="30" y2="0" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="40" y1="100" x2="40" y2="0" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="50" y1="100" x2="50" y2="0" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="60" y1="100" x2="60" y2="0" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="70" y1="100" x2="70" y2="0" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="80" y1="100" x2="80" y2="0" stroke="rgb(43,47,53)" stroke-linecap="round"></line> <line x1="90" y1="100" x2="90" y2="0" stroke="rgb(43,47,53)" stroke-linecap="round"></line>
+
+          <svg width="400" height="400" fill="#333" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            
+          </svg>
+        </svg>
+      </div>
+
+    </section>
+
+    <footer></footer>
+  </body>
+</html>

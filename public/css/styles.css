@@ -1,0 +1,198 @@
+.viewActive {
+    display: block !important;
+}
+
+#txtIzq {
+    top: 40px;
+    left: 0px;
+    outline: none;
+    display: none;
+    overflow: auto;
+    padding-top: 3px;
+    padding-left: 5px;
+    line-height: 24px;
+    position: absolute;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    width: calc(100% - 10px);
+    height: calc(100% - 40px);
+    /*height: calc( 50% - 8px);*/
+    color: rgb( 122, 133, 144);
+    background: rgb( 44, 48, 56);
+}
+
+#txtIzq #lines {
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    font-weight: bold;
+    text-align: right;
+    position: absolute;
+    color: rgb( 102, 113, 124);
+    min-height: calc(100% - 0px);
+    background: rgb( 40, 44, 52);
+}
+
+#txtIzq #lines > div {
+    height: 24px;
+    padding-right: 4px;
+    line-height: 24px;
+    transition: all linear 0.1s;
+    background: rgb( 33, 33, 33, 0.07);
+}
+
+#txtIzq #lines > div:nth-child(2n) {
+    background: rgb( 33, 37, 43);
+}
+
+#txtIzq #lines .err {
+    background: #85221b !important;
+    color: rgb( 172, 183, 194) !important;
+}
+
+#txtIzq #code {
+    top: 0px;
+    left: 30px; 
+    position: absolute;
+    width: calc( 100% - 30px);
+    min-height: calc(100% - 0px);
+    background: rgba( 220, 220, 220, 0);
+}
+
+#txtIzq #code > div {
+    height: 24px;
+    padding-left: 4px;
+    line-height: 24px;
+    transition: all linear 0.1s;
+    background: rgba( 33, 33, 33, 0.15);
+}
+
+#txtIzq #code > div:nth-child(2n) {
+    background: rgba( 220, 220, 220, 0);
+}
+
+#txtIzq #code > div:hover {
+    background: rgba( 160, 160, 160, 0.1);
+}
+
+#txtIzq #code > div * {
+    background: transparent !important;
+}
+
+#txtIzq #code .err {
+    background: #c0392b !important;
+    color: rgb( 172, 183, 194) !important;
+}
+
+#txtIzq #code .err:hover {
+    background: #af3327 !important;
+}
+
+#txtDer {
+    top: 40px;
+    left: 0px;
+    display: none;
+    outline: none;
+    overflow: hidden;
+    padding-top: 3px;
+    padding-left: 5px;
+    line-height: 24px;
+    position: absolute;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    width: calc(100% - 10px);
+    height: calc(100% - 40px);
+    color: rgb( 122, 133, 144);
+    background: rgb( 44, 48, 56);
+}
+
+#txtDer #buttons {
+    top: 10px;
+    left: 10px;
+    width: 400px;
+    height: 400px;
+    z-index: 300;
+    position: absolute;
+}
+
+#txtDer #buttons button {
+    float: left;
+    padding: 0 0;
+    cursor: pointer;
+    margin-top: 36px;
+    margin-left: 36px;
+    margin-right: 0px;
+    border: solid 0px;
+    margin-bottom: 0px;
+    position: relative;
+    width: 4px !important;
+    height: 4px !important;
+    background: rgba( 255, 255, 255, 0.4);
+    transform: translate(-50%, -50%);
+}
+
+#txtDer #buttons button:nth-child(1) {
+    margin-left: 40px !important;
+}
+
+#txtDer svg {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+}
+
+#PI {
+    top: 200px;
+    left: 0px;
+    width: 200px;
+    z-index: 300;
+    position: absolute;
+    height: calc(100% - 200px);
+    border-radius: 0px 0px 0px 8px;
+    background-color: rgb( 40, 44, 52) !important;
+}
+
+#PIheader {
+    width: 200px;
+    height: 200px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 8px 0px 0px 0px;
+    color: rgb( 56%, 56%, 56%);
+    background: -webkit-linear-gradient(left top, #C33764, #1D2671); /* For Safari 5.1 to 6.0 */
+}
+
+#PI 
+#PImenu {
+    background: rgb( 40, 44, 52) !important;
+}
+
+#PI 
+#PImenu
+button {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border: solid 0px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 20px;
+    color: rgb( 72, 83, 94);
+    border-radius: 8px 8px;
+    background: rgba( 1, 1, 1, 0.1);
+    transition: background linear 0.2s;
+}
+
+#PI
+#PImenu
+.active {
+    font-weight: bold;
+    background: rgba( 1, 1, 1, 0.2);
+    box-shadow: 0px 0px 4px 2px rgba( 1, 1, 1, 0.1);
+}
+
+#PI 
+#PImenu
+button:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,238 @@
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: rgb( 33, 37, 43);
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: rgb( 33, 37, 43);
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 4px 4px;
+	background-color: rgb( 53, 57, 63);
+}
+
+* {
+    outline: none;
+    font-family: "Arial";
+}
+
+body {
+    width: 100%;
+    margin: 0 0;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    border-radius: 8px 8px;
+    background: transparent;
+}
+
+header {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 300;
+    height: 40px;
+    position: absolute;
+    border-radius: 0px 8px 0px 0px;
+    background: rgb( 33, 37, 43);
+}
+
+header button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    border: solid 0px;
+    font-weight: bold;
+    background: transparent;
+    color: rgb( 102, 113, 124);
+}
+
+#title {
+    top: 50%;
+    left: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    color: rgb( 102, 113, 124);
+    transform: translate(-50%, -50%); 
+}
+
+#actionButtons {
+    top: 0px;
+    right: 10px;
+    width: 90px;
+    height: 21px;
+    position: absolute;
+}
+
+#actionButtons 
+button {
+    width: 20px;
+    height: 20px;
+    float: right;
+    outline: none;
+    margin-top: 10px;
+    color: #DDDDDD;
+    margin-left: 4px;
+    border: solid 0px;
+    position: relative;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 4px 4px;
+    transition: background linear 0.2s;
+    background: rgba( 200, 200, 200, 0.1);
+}
+
+#actionButtons 
+button:nth-child(1) {
+    margin-left: 8px;
+    line-height: 8px;
+    color: rgba( 1, 1, 1, 0);
+}
+
+#actionButtons 
+button:nth-child(2) {
+    margin-left: 8px;
+    line-height: 0px !important;
+    color: rgba( 1, 1, 1, 0);
+}
+
+#actionButtons 
+button:nth-child(3) {
+    margin-left: 8px;
+    line-height: 0px !important;
+    color: rgba( 1, 1, 1, 0);
+}
+
+#actionButtons:hover
+button:nth-child(1) {
+    background: #D44747;
+    color: rgba( 33, 37, 43, 1);
+}
+
+#actionButtons:hover
+button:nth-child(2) {
+    background: rgb(218, 189, 64);
+    color: rgba( 33, 37, 43, 1);
+}
+
+#actionButtons:hover
+button:nth-child(3) {
+    background: rgb( 69, 204, 62);
+    color: rgba( 33, 37, 43, 1);
+}
+
+#actionButtons 
+button
+span {
+    top: 50%;
+    left: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    transition: color linear 0.2s;
+    transform: translate(-50%, -50%);
+    color: rgba( 200, 200, 200, 0);
+}
+
+#actionButtons:hover
+span {
+    color: rgb( 33, 33, 33);
+}
+
+.titlebar {
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
+button {
+    -webkit-app-region: no-drag;
+}
+
+footer {
+    left: 200px;
+    bottom: 0px;
+    height: 40px;
+    padding-left: 8px;
+    font-weight: bold;
+    position: absolute;
+    line-height: 45px;
+    width: calc(100% - 208px);
+    transition: all linear 0.2s;
+    color: rgb( 200, 200, 200);
+    border-radius: 0px 0px 8px 0px;
+    background: rgb( 102, 113, 124);
+}
+
+.err {
+    background: #c0392b;
+}
+
+#space {
+    top: 0px;
+    left: 200px;
+    z-index: 300;
+    position: absolute;
+    width: calc(100% - 200px);
+    height: calc( 100% - 40px);
+    box-shadow: 0px 0px 100px rgba(1, 1, 1, 0.4);
+}
+
+#viewSVG {
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    width: 200px;
+    z-index: 300;
+    height: 200px;
+    font-size: 25px;
+    cursor: pointer;
+    border: solid 0px;
+    position: absolute;
+    color: rgb( 152, 163, 174);
+    transition: opacity linear 0.3s;
+    background: rgba( 1, 1, 1, 0.5);
+}
+
+#viewSVG:hover {
+    opacity: 1;
+}
+
+#PIheader:hover > svg {
+    filter: blur(5px);
+}
+
+.view {
+    top: 50%;
+    left: 50%;
+    z-index: 400;
+    position: fixed;
+    overflow: hidden;
+    border-radius: 8px 8px;
+    width: 500px !important;
+    height: 500px !important;
+    transform: translate( -50%, -50%);
+    box-shadow: 0px 0px 100px 40px rgba( 1, 1, 1, 0.6);
+}
+
+.view:hover > svg {
+    filter: blur(0px) !important;
+}
+
+.view > #viewSVG {
+    width: 50px;
+    height: 50px;
+    border-radius: 0px 0px 8px 0px;
+}
+
+.view:hover > #viewSVG {
+    opacity: 1;
+}
+
+#spaceBlur {
+    filter: blur(5px) !important;
+}

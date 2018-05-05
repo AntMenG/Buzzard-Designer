@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>
+			Hi
+		</title>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  		<script src="./sbn.js"></script>
+		<script>
+			$( function () {
+				var code = 'Paper 20 Pen 100 Line 50 77 22 27 Line 22 27 78 27 Line 78 27 50 77';
+				var svg = sbn.compile(code);
+				
+				document.body.innerHTML = svg;
+			});
+		</script>
+	</head>
+	<body>
+		This
+	</body>
+</html>
